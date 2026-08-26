@@ -1,17 +1,12 @@
-#include <stdio.h>
-
 #ifndef INPUT_H_
-    #define INPUT_H_
-    void Input(double* coeff, char sym);
+#define INPUT_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include "Const.h"
 
-    void Input(double* coeff, char sym){
-        int test = 0;
-        printf("Enter %c-coefficient:\n", sym);
-        test = scanf("%lg", coeff);
-        while(test != 1){
-            printf("You've made a mistake entering, please try again:\n");
-            scanf("%*c");
-            test = scanf("%lg", coeff);
-        }
-    }
+void MainInput(Roots* MainRoots);
+void PrintInput();
+int Input(double* coeff, char sym);
+void FuncClear();
+
 #endif
