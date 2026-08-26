@@ -1,10 +1,10 @@
-**##SQUARE EQUATIONS SOLVER**
+# SQUARE EQUATIONS SOLVER
 
 Hello, GitHub! Here is my Quadratic Equations Solver!
 
 This repository contains the code for a program that solves quadratic equations and a file with reference values for testing.
 
-**#How it works?**
+## How it works?
 
 1. The program tests itself. It takes reference values from *Reference.txt* and than compares them to result of the program's work.
 2. After test the program offers the user to input coefficients of quadratic equation
