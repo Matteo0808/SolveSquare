@@ -7,7 +7,7 @@
 #include "Const.h"
 #include "MyAssert.h"
 
-int SolveSquare(Roots* MainRoots);
+Case SolveSquare(Roots* MainRoots);
 void SolveLinear(Roots* MainRoots);
 void SolveZeroD(Roots* MainRoots);
 void SolveComplex(Roots* MainRoots);

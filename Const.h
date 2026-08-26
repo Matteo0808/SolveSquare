@@ -8,13 +8,13 @@
 #define ERRROR 1
 #define SUCCESS 0
 
-const unsigned short MAX 5
+const unsigned short MAX = 5;
 
 // Погрешность
 const double EPS = 1e-6;
 
 //  Случаи при решении квадратных уравнений
-enum Case{
+enum Case {
     No_Root_In_Real_Numbers,
     Infinite_Number_Of_Roots,
     No_Roots,
@@ -22,20 +22,27 @@ enum Case{
     Two_Roots,
     One_Root_Zero_D
 };
+struct Equation {
+    Coefficients coeffs;
+    Roots roots;
+};
 
-// Все составляющие квадратного уравнения
-struct Roots {
+struct Coefficients {
     double a;
     double b;
     double c;
-    int case_solution;
+};
+
+// Все составляющие квадратного уравнения
+struct Roots {
+    Case case_solution;
     double x1;
     double x2;
     double x_for_zero_a;
     double x_for_zero_D;
     double x1_real_part;
     double x1_imagine_part;
-}; 
+};
 
 // Цвета
     #define RED_TEXT "\033[91m"

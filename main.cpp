@@ -12,18 +12,20 @@
 #include "Test.h"
 
 int main(){
-    struct Roots MainRoots = {};
+    
+    // TODO: исправить пробелы, переисать int на Case, исправить ифы, warnings, new sruct, переделать solve нахуй
+
+    struct Equation MainEquation = {};
     if(RunMainTest() != SUCCESS)
     {
-        printf(WHITE_TEXT RED_BG"__TESTS__FAILED__"CLEAR"_\n");
+        printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
         return ERRROR;
     }
     else{
-        printf(WHITE_TEXT GREEN_BG"__TESTS__COMPLETED__SUCCESSFULLY__"CLEAR"_\n");
+        printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
     }
 
     MainInput(&MainRoots);
-    malloc()
     MainRoots.case_solution = SolveSquare(&MainRoots);
 
     Answer(&MainRoots);

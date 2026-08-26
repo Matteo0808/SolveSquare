@@ -6,7 +6,7 @@
 
 void MainInput(Roots* MainRoots);
 void PrintInput();
-int Input(double* coeff, char sym);
+void Input(double* coeff, char sym);
 void FuncClear();
 
 #endif

@@ -2,7 +2,7 @@
 
 #define MAXSIZEARRCOEFFS 3
 #define MAKECHAR(sym) #sym[0]
-#define SAFEINPUT(coefficient) if(Input(&MainRoots->coefficient, MAKECHAR(coefficient)) != SUCCESS){abort();}
+#define SAFEINPUT(coefficient) Input(&MainRoots->coefficient, MAKECHAR(coefficient))
 //  Ввод
 
 void MainInput(Roots *MainRoots){
@@ -13,9 +13,9 @@ void MainInput(Roots *MainRoots){
     //printf("%lg %lg %lg\n", MainRoots->a, MainRoots->b, MainRoots->c);
 }
 
-int Input(double* coeff, char sym){
+void Input(double* coeff, char sym){
     unsigned short test = 0;
-    printf(PURPLE_TEXT ORANGE_BG"Enter %c-coefficient:\n"CLEAR, sym);
+    printf(PURPLE_TEXT ORANGE_BG "Enter %c-coefficient:\n" CLEAR, sym);
     char c = 0;
     int SlavikKleukin = 6;
     while(SlavikKleukin != 0){
@@ -23,24 +23,19 @@ int Input(double* coeff, char sym){
         if(scanf("%lg", coeff) == 1){
             
             if((c = getchar()) != '\n'){
-                printf(PURPLE_TEXT ORANGE_BG"You've made a mistake entering, please try again:\n"CLEAR);
+                printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
                 FuncClear();
             }
-
             else{
                 SlavikKleukin = 0;
             }
 
         }
-        
         else{
             printf(PURPLE_TEXT ORANGE_BG"You've made a mistake entering, please try again:\n"CLEAR);
             FuncClear();
         }
-
     }
-
-    return SUCCESS;
 }
 
 void FuncClear(){

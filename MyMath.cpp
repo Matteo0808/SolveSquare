@@ -13,7 +13,7 @@ int IsEqual(const double number1, const double number2){
     }
 }
 
-int SolveSquare(Roots* MainRoots){
+Case SolveSquare(Roots* MainRoots){
     MyAssert(MainRoots);
     //printf("%lg %lg %lg\n", MainRoots->a, MainRoots->b, MainRoots->c);
 
