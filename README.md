@@ -17,8 +17,9 @@ The program works with real numbers, but **Solver** provides for the case of neg
 
 Comparison of double numbers is performed with accuracy **EPS = 1 * 10^-6**.
 
+
 <details>
-<summary>**Includes**:</summary>
+<summary>Includes:</summary>
 
 <stdio.h>
 <stdlib.h>
