@@ -7,6 +7,6 @@
 
 int RunMainTest();
 int RunTest(Equation ExpectedEquation, Equation TestEquation);
-int OpenTestFile(Roots ExpectedRoots[], int size);
+int OpenTestFile(Equation TestEquation[], Equation ExpectedEquation[], int size);
 
 #endif

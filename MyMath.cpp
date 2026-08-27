@@ -1,9 +1,9 @@
 //  Вся математика
+
 #include "MyMath.h"
 
 
-//  Решение квадратного уравнения
-
+//  Сравнение дабловских чисел с точностью EPS
 int IsEqual(const double number1, const double number2){
     if(fabs(number1 - number2) < EPS){
         return 1;
@@ -13,6 +13,7 @@ int IsEqual(const double number1, const double number2){
     }
 }
 
+//  Решение квадратного уравнение
 Case SolveSquare(Coefficients coeffs, Roots* roots){
     MyAssert(roots);
     //printf("%lg %lg %lg\n", coeff.a, coeffs.b, coeffs.c);
@@ -24,49 +25,42 @@ Case SolveSquare(Coefficients coeffs, Roots* roots){
             if(IsEqual(coeffs.c, 0)){
                 return Infinite_Number_Of_Roots; // бесконечное количество решений
             }
-
             else{ // c != 0
                 return No_Roots; // нет решений(a = 0, b = 0, c != 0)
             }
 
         }
-
         else{ // b != 0
             SolveLinear(coeffs, roots);
             return One_Root_Zero_A; // 1 решение(a = 0)
         }
 
     }
-
     else{
         double D = 0;
         D = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
 
-        if(D > 0){
+        // TODO
+        if (D > EPS){
             
             double sqrt_D = 0;
             sqrt_D = sqrt(D);
 
-            roots->x1 = (-coeffs.b + sqrt_D)/(2 * coeffs.a); // большее
-            roots->x2 = (-coeffs.b - sqrt_D)/(2 * coeffs.a); // меньшее
+            roots->x1 = (-coeffs.b + sqrt_D)/(2 * coeffs.a); // больший корень
+            roots->x2 = (-coeffs.b - sqrt_D)/(2 * coeffs.a); // меньший корень
 
             return Two_Roots; // 2 решения
         }
-        
-        else if(IsEqual(D, 0)){
+        else if (IsEqual(D, 0)){
             SolveZeroD(coeffs, roots);
             return One_Root_Zero_D; // 1 решение(x1 = x2)
         }
-        
-        else if(D < 0){
+        else {
             SolveComplex(coeffs, roots);
             //printf("%lg\n", D);
-            return No_Root_In_Real_Numbers; // нет решений(действительных)
+            return No_Roots_In_Real_Numbers; // нет решений(действительных)
         }
-
     }
-
-    return 0;
 }
 
 //  Решение линейного уравнения при a = 0
@@ -99,7 +93,6 @@ void SolveComplex(Coefficients coeffs, Roots* roots){
 }
 //  Вывод ответа
 void Answer(Roots roots){
-    //MyAssert(MainRoots);
     
     switch (roots.case_solution){
         
@@ -123,15 +116,10 @@ void Answer(Roots roots){
             printf(PURPLE_TEXT ORANGE_BG "Infinite number of roots\n" CLEAR);
             break;
 
-        case No_Root_In_Real_Numbers:
+        case No_Roots_In_Real_Numbers:
             printf(PURPLE_TEXT ORANGE_BG "No roots in real numbers\n" CLEAR);
             printf(PURPLE_TEXT ORANGE_BG "The equation has 2 complex roots:\nx1 = %lg + %lgi\tx2 = %lg - %lgi\n" CLEAR, \
                 roots.x1_real_part, roots.x1_imagine_part, roots.x1_real_part, roots.x1_imagine_part);
             break;
-
     }
 }
-
-
-
-// __VA_ARGS__ 
