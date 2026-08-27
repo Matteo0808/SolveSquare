@@ -13,15 +13,15 @@ int IsEqual(const double number1, const double number2){
     }
 }
 
-Case SolveSquare(Roots* MainRoots){
-    MyAssert(MainRoots);
-    //printf("%lg %lg %lg\n", MainRoots->a, MainRoots->b, MainRoots->c);
+Case SolveSquare(Coefficients coeffs, Roots* roots){
+    MyAssert(roots);
+    //printf("%lg %lg %lg\n", coeff.a, coeffs.b, coeffs.c);
 
-    if(IsEqual(MainRoots->a, 0)){
+    if(IsEqual(coeffs.a, 0)){
 
-        if(IsEqual(MainRoots->b, 0)){
+        if(IsEqual(coeffs.b, 0)){
 
-            if(IsEqual(MainRoots->c, 0)){
+            if(IsEqual(coeffs.c, 0)){
                 return Infinite_Number_Of_Roots; // бесконечное количество решений
             }
 
@@ -32,7 +32,7 @@ Case SolveSquare(Roots* MainRoots){
         }
 
         else{ // b != 0
-            SolveLinear(MainRoots);
+            SolveLinear(coeffs, roots);
             return One_Root_Zero_A; // 1 решение(a = 0)
         }
 
@@ -40,26 +40,26 @@ Case SolveSquare(Roots* MainRoots){
 
     else{
         double D = 0;
-        D = MainRoots->b * MainRoots->b - 4 * MainRoots->a * MainRoots->c;
+        D = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
 
         if(D > 0){
             
             double sqrt_D = 0;
             sqrt_D = sqrt(D);
 
-            MainRoots->x1 = (-MainRoots->b + sqrt_D)/(2 * MainRoots->a); // большее
-            MainRoots->x2 = (-MainRoots->b - sqrt_D)/(2 * MainRoots->a); // меньшее
+            roots->x1 = (-coeffs.b + sqrt_D)/(2 * coeffs.a); // большее
+            roots->x2 = (-coeffs.b - sqrt_D)/(2 * coeffs.a); // меньшее
 
             return Two_Roots; // 2 решения
         }
         
         else if(IsEqual(D, 0)){
-            SolveZeroD(MainRoots);
+            SolveZeroD(coeffs, roots);
             return One_Root_Zero_D; // 1 решение(x1 = x2)
         }
         
         else if(D < 0){
-            SolveComplex(MainRoots);
+            SolveComplex(coeffs, roots);
             //printf("%lg\n", D);
             return No_Root_In_Real_Numbers; // нет решений(действительных)
         }
@@ -70,63 +70,63 @@ Case SolveSquare(Roots* MainRoots){
 }
 
 //  Решение линейного уравнения при a = 0
-void SolveLinear(Roots* MainRoots){
-    MyAssert(MainRoots);
+void SolveLinear(Coefficients coeffs, Roots* roots){
+    MyAssert(roots);
     
-    MainRoots->x_for_zero_a = -MainRoots->c / MainRoots->b;
+    roots->x_for_zero_a = -coeffs.c / coeffs.b;
 }
 
 // Нахождение единственного корня при D = 0
-void SolveZeroD(Roots* MainRoots){
-    MyAssert(MainRoots);
+void SolveZeroD(Coefficients coeffs, Roots* roots){
+    MyAssert(roots);
     
-    MainRoots->x_for_zero_D = -MainRoots->b / (2 * MainRoots->a);
+    roots->x_for_zero_D = -coeffs.b / (2 * coeffs.a);
 }
 
 //  Нахождение мнимых корней
-void SolveComplex(Roots* MainRoots){
-    MyAssert(MainRoots);    
+void SolveComplex(Coefficients coeffs, Roots* roots){
+    MyAssert(roots);    
 
     double D_complex = 0;
-    D_complex = -1 * (MainRoots->b * MainRoots->b - 4 * MainRoots->a * MainRoots->c);
+    D_complex = -1 * (coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c);
 
     double sqrt_D_complex = 0;
     sqrt_D_complex = sqrt(D_complex);
 
-    MainRoots->x1_real_part = (-MainRoots->b) / (2 * MainRoots->a);
-    MainRoots->x1_imagine_part = sqrt_D_complex / (2 * MainRoots->a);
+    roots->x1_real_part = (-coeffs.b) / (2 * coeffs.a);
+    roots->x1_imagine_part = sqrt_D_complex / (2 * coeffs.a);
 
 }
 //  Вывод ответа
-void Answer(Roots* MainRoots){
-    MyAssert(MainRoots);
+void Answer(Roots roots){
+    //MyAssert(MainRoots);
     
-    switch (MainRoots->case_solution){
+    switch (roots.case_solution){
         
         case One_Root_Zero_D:
-            printf(PURPLE_TEXT ORANGE_BG"The equation has 2 roots, but they are same: x = %lg\n"CLEAR, MainRoots->x_for_zero_D);
+            printf(PURPLE_TEXT ORANGE_BG "The equation has 2 roots, but they are same: x = %lg\n" CLEAR, roots.x_for_zero_D);
             break;
 
         case Two_Roots:
-            printf(PURPLE_TEXT ORANGE_BG"The equation has 2 roots:\nx1 = %lg\tx2 = %lg\n"CLEAR, MainRoots->x1, MainRoots->x2);
+            printf(PURPLE_TEXT ORANGE_BG "The equation has 2 roots:\nx1 = %lg\tx2 = %lg\n" CLEAR, roots.x1, roots.x2);
             break;
 
         case One_Root_Zero_A:
-            printf(PURPLE_TEXT ORANGE_BG"The equation has 1 root:\nx = %lg\n"CLEAR, MainRoots->x_for_zero_a);
+            printf(PURPLE_TEXT ORANGE_BG "The equation has 1 root:\nx = %lg\n" CLEAR, roots.x_for_zero_a);
             break;
 
         case No_Roots:
-            printf(PURPLE_TEXT ORANGE_BG"No roots\n"CLEAR);
+            printf(PURPLE_TEXT ORANGE_BG "No roots\n" CLEAR);
             break;
 
         case Infinite_Number_Of_Roots:
-            printf(PURPLE_TEXT ORANGE_BG"Infinite number of roots\n"CLEAR);
+            printf(PURPLE_TEXT ORANGE_BG "Infinite number of roots\n" CLEAR);
             break;
 
         case No_Root_In_Real_Numbers:
-            printf(PURPLE_TEXT ORANGE_BG"No roots in real numbers\n"CLEAR);
-            printf(PURPLE_TEXT ORANGE_BG"The equation has 2 complex roots:\nx1 = %lg + %lgi\tx2 = %lg - %lgi\n"CLEAR, \
-                MainRoots->x1_real_part, MainRoots->x1_imagine_part, MainRoots->x1_real_part, MainRoots->x1_imagine_part);
+            printf(PURPLE_TEXT ORANGE_BG "No roots in real numbers\n" CLEAR);
+            printf(PURPLE_TEXT ORANGE_BG "The equation has 2 complex roots:\nx1 = %lg + %lgi\tx2 = %lg - %lgi\n" CLEAR, \
+                roots.x1_real_part, roots.x1_imagine_part, roots.x1_real_part, roots.x1_imagine_part);
             break;
 
     }

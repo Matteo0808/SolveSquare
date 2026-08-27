@@ -6,7 +6,7 @@
 #include "MyAssert.h"
 
 int RunMainTest();
-int RunTest(Roots ExpectedRoots);
+int RunTest(Equation ExpectedEquation, Equation TestEquation);
 int OpenTestFile(Roots ExpectedRoots[], int size);
 
 #endif

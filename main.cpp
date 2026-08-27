@@ -13,8 +13,8 @@
 
 int main(){
     
-    // TODO: исправить пробелы, переисать int на Case, исправить ифы, warnings, new sruct, переделать solve нахуй
-
+    // TODO: исправить пробелы, переисать int на Case, исправить ифы, warnings, new struct, переделать solve нахуй
+    // ask: abort(), разделение структуры, про потоки _thread_local и _Atomic
     struct Equation MainEquation = {};
     if(RunMainTest() != SUCCESS)
     {
@@ -25,7 +25,7 @@ int main(){
         printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
     }
 
-    MainInput(&MainRoots);
+    MainInput(&(MainEquation.coeffs));
     MainRoots.case_solution = SolveSquare(&MainRoots);
 
     Answer(&MainRoots);

@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "Const.h"
 
-void MainInput(Roots* MainRoots);
+void MainInput(Coefficients* coeff);
 void PrintInput();
 void Input(double* coeff, char sym);
 void FuncClear();

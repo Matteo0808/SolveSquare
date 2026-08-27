@@ -5,7 +5,7 @@ int RunMainTest(){
     Equation ExpectedEquation[MAX] = {};
     Equation TestEquation[MAX] = {};
     int size = (sizeof(ExpectedEquation) / sizeof(Equation));
-    if(OpenTestFile(ExpectedEquation->roots, TestEquation->coeffs, size) != SUCCESS){
+    if(OpenTestFile(, size) != SUCCESS){
         //printf("hui1\n");
         return ERRROR;
     }
@@ -24,7 +24,7 @@ int RunMainTest(){
     for(int i = 0; i < size; ++i){
         MyAssert(i >= 0 && i < size);
         //printf("i = %d\n", i);
-        count += RunTest(ExpectedEquation[i]);
+        count += RunTest(ExpectedEquation[i], TestEquation[i]);
         //printf("count = %d\n", count);
     }
 
@@ -36,22 +36,21 @@ int RunMainTest(){
     return SUCCESS;
 }
 
-int RunTest(Roots ExpectedEquation.roots, Coefficients TestEquation.coeffs){
-    Equation TestEqaution = {ExpectedEquation.a, ExpectedEquation.b, ExpectedEquation.c, 0, 0, 0, 0, 0, 0, 0};
-    TestRoots.case_solution = SolveSquare(&TestRoots);
+int RunTest(Equation ExpectedEquation, Equation TestEquation){
+    TestEquation.case_solution = SolveSquare(ExpectedEquation.coeffs, &(TestEquation.roots));
     // printf("a = %lg \nb = %lg \nc = %lg \ncase = %d \nx1 = %lg \nx2 = %lg \nxa = %lg \nxd = %lg \nx1r = %lg \nx1i = %lg\n\n\n", ExpectedEquation.a, ExpectedEquation.b,
     //                 ExpectedEquation.c, ExpectedEquation.case_solution,
     //                 ExpectedEquation.x1, ExpectedEquation.x2,
     //                 ExpectedEquation.x_for_zero_a, ExpectedEquation.x_for_zero_D, 
     //                 ExpectedEquation.x1_real_part, ExpectedEquation.x1_imagine_part);
     
-    if(TestRoots.case_solution == ExpectedEquation.case_solution &&
-        TestRoots.x1 == ExpectedEquation.x1 &&
-        TestRoots.x2 == ExpectedEquation.x2 &&
-        TestRoots.x_for_zero_a == ExpectedEquation.x_for_zero_a &&
-        TestRoots.x_for_zero_D == ExpectedEquation.x_for_zero_D &&
-        TestRoots.x1_imagine_part == ExpectedEquation.x1_imagine_part &&
-        TestRoots.x1_real_part == ExpectedEquation.x1_real_part){
+    if(TestEquation.case_solution == ExpectedEquation.case_solution &&
+        TestEquation.x1 == ExpectedEquation.x1 &&
+        TestEquation.x2 == ExpectedEquation.x2 &&
+        TestEquation.x_for_zero_a == ExpectedEquation.x_for_zero_a &&
+        TestEquation.x_for_zero_D == ExpectedEquation.x_for_zero_D &&
+        TestEquation.x1_imagine_part == ExpectedEquation.x1_imagine_part &&
+        TestEquation.x1_real_part == ExpectedEquation.x1_real_part){
         return SUCCESS;
     }
 
@@ -90,8 +89,7 @@ int func() {
     botat();
 }
 */
-int OpenTestFile(Roots ExpectedEquation[], int size){
-    MyAssert(ExpectedEquation);
+int OpenTestFile(Equation TestEquation[], Equation ExpectedEquation, int size){
     FILE *fp = fopen("Reference.txt", "r");
     if(fp == 0){
         printf("__FILE__READING__FAILURE__\n");
@@ -99,12 +97,13 @@ int OpenTestFile(Roots ExpectedEquation[], int size){
     }
 
     for(int i = 0; i < size; ++i){
+        MyAssert(i >= 0 && i < size);
         fscanf(fp, "%lg %lg %lg %d %lg %lg %lg %lg %lg %lg", 
-            &ExpectedEquation[i].coeffs.a, &ExpectedEquation[i].b,
-            &ExpectedEquation[i].c, &ExpectedEquation[i].case_solution,
-            &ExpectedEquation[i].x1, &ExpectedEquation[i].x2,
-            &ExpectedEquation[i].x_for_zero_a, &ExpectedEquation[i].x_for_zero_D, 
-            &ExpectedEquation[i].x1_real_part, &ExpectedEquation[i].x1_imagine_part);
+            &(TestEquation[i].coeffs.a), &(TestEquation[i].coeffs.b), &(TestEquation[i].coeffs.c), 
+            &(ExpectedEquation[i].roots.case_solution),
+            &(ExpectedEquation[i].roots.x1), &(ExpectedEquation[i].roots.x2),
+            &(ExpectedEquation[i].roots.x_for_zero_a), &(ExpectedEquation[i].roots.x_for_zero_D), 
+            &(ExpectedEquation[i].roots.x1_real_part), &(ExpectedEquation[i].roots.x1_imagine_part));
     }
     fclose(fp);
     return SUCCESS;

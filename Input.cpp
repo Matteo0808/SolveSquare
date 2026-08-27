@@ -2,10 +2,10 @@
 
 #define MAXSIZEARRCOEFFS 3
 #define MAKECHAR(sym) #sym[0]
-#define SAFEINPUT(coefficient) Input(&MainRoots->coefficient, MAKECHAR(coefficient))
+#define SAFEINPUT(coefficient) Input(&coefficients->coefficient, MAKECHAR(coefficient))
 //  Ввод
 
-void MainInput(Roots *MainRoots){
+void MainInput(Coefficients* coeffs){
     PrintInput();
     SAFEINPUT(a);
     SAFEINPUT(b);

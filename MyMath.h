@@ -7,11 +7,11 @@
 #include "Const.h"
 #include "MyAssert.h"
 
-Case SolveSquare(Roots* MainRoots);
-void SolveLinear(Roots* MainRoots);
-void SolveZeroD(Roots* MainRoots);
-void SolveComplex(Roots* MainRoots);
-void Answer(Roots* MainRoots);
+Case SolveSquare(Coefficients coeffs, Roots* roots);
+void SolveLinear(Coefficients coeffs, Roots* roots);
+void SolveZeroD(Coefficients coeffs, Roots* roots);
+void SolveComplex(Coefficients coeffs, Roots* roots);
+void Answer(Roots roots);
 int IsEqual(const double number1, const double number2);
 
 #endif
