@@ -4,25 +4,32 @@
 #define CONST_H_
 #include <stdio.h>
 
-#define CONTINUE 2
-#define ERRROR 1
-#define SUCCESS 0
+//#define CONTINUE 2
+// #define ERRROR 1
+// #define SUCCESS 0
 
 const unsigned short MAX = 5;
 
 // Погрешность
 const double EPS = 1e-6;
 
-//  Случаи при решении квадратных уравнений
-enum Case {
-    No_Roots_In_Real_Numbers,
-    Infinite_Number_Of_Roots,
-    No_Roots,
-    One_Root_Zero_A,
-    Two_Roots,
-    One_Root_Zero_D
+//  Returns
+enum Error_or_Success {
+    SUCCESS = 0,
+    ERRROR = 1
 };
 
+//  Случаи при решении квадратных уравнений
+enum Case {
+    No_Roots_In_Real_Numbers = 0,
+    Infinite_Number_Of_Roots = 1,
+    No_Roots = 2,
+    One_Root_Zero_A = 3,
+    Two_Roots = 4,
+    One_Root_Zero_D = 5
+};
+
+//  Коэффициенты квадратного уравнения
 struct Coefficients {
     double a;
     double b;
@@ -40,6 +47,7 @@ struct Roots {
     double x1_imagine_part;
 };
 
+//  Общая структура уравнения
 struct Equation {
     Coefficients coeffs;
     Roots roots;

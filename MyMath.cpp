@@ -4,7 +4,7 @@
 
 
 //  Сравнение дабловских чисел с точностью EPS
-int IsEqual(const double number1, const double number2){
+bool IsEqual(const double number1, const double number2){
     if(fabs(number1 - number2) < EPS){
         return 1;
     }
@@ -18,30 +18,10 @@ Case SolveSquare(Coefficients coeffs, Roots* roots){
     MyAssert(roots);
     //printf("%lg %lg %lg\n", coeff.a, coeffs.b, coeffs.c);
 
-    if(IsEqual(coeffs.a, 0)){
-
-        if(IsEqual(coeffs.b, 0)){
-
-            if(IsEqual(coeffs.c, 0)){
-                return Infinite_Number_Of_Roots; // бесконечное количество решений
-            }
-            else{ // c != 0
-                return No_Roots; // нет решений(a = 0, b = 0, c != 0)
-            }
-
-        }
-        else{ // b != 0
-            SolveLinear(coeffs, roots);
-            return One_Root_Zero_A; // 1 решение(a = 0)
-        }
-
-    }
-    else{
+    if (!IsEqual(coeffs.a, 0)){
         double D = 0;
         D = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
-
-        // TODO
-        if (D > EPS){
+        if (D > EPS){ //  Погрешность EPS = 1e-6
             
             double sqrt_D = 0;
             sqrt_D = sqrt(D);
@@ -57,10 +37,17 @@ Case SolveSquare(Coefficients coeffs, Roots* roots){
         }
         else {
             SolveComplex(coeffs, roots);
-            //printf("%lg\n", D);
             return No_Roots_In_Real_Numbers; // нет решений(действительных)
         }
     }
+    if (!IsEqual(coeffs.b, 0)){
+        SolveLinear(coeffs, roots);
+        return One_Root_Zero_A; // 1 решение(a = 0)
+    }
+    if (!IsEqual(coeffs.c, 0)){
+        return No_Roots; // нет решений(a = 0, b = 0, c != 0)
+    }
+    return Infinite_Number_Of_Roots;
 }
 
 //  Решение линейного уравнения при a = 0
@@ -121,5 +108,8 @@ void Answer(Roots roots){
             printf(PURPLE_TEXT ORANGE_BG "The equation has 2 complex roots:\nx1 = %lg + %lgi\tx2 = %lg - %lgi\n" CLEAR, \
                 roots.x1_real_part, roots.x1_imagine_part, roots.x1_real_part, roots.x1_imagine_part);
             break;
+        
+        default:
+                MyAssert(1);
     }
 }

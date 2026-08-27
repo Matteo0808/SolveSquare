@@ -5,8 +5,8 @@
 #include "MyMath.h"
 #include "MyAssert.h"
 
-int RunMainTest();
-int RunTest(Equation ExpectedEquation, Equation TestEquation);
-int OpenTestFile(Equation TestEquation[], Equation ExpectedEquation[], int size);
+Error_or_Success RunMainTest();
+Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation);
+Error_or_Success OpenTestFile(Equation TestEquation[], Equation ExpectedEquation[], int size);
 
 #endif

@@ -1,5 +1,5 @@
 //  Мой собственный assert() для дебага
-
+#include <assert.h>
 #ifndef MYASSERT_H_
 #define MYASSERT_H_
 #include <stdio.h>

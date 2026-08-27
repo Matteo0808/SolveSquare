@@ -4,9 +4,10 @@
 #include <stdlib.h>
 #include "Const.h"
 
+Error_or_Success FuncScanf(double* coeff);
 void MainInput(Coefficients* coeff);
 void PrintInput();
 void Input(double* coeff, char sym);
-void FuncClear();
+void BufferClean();
 
 #endif

@@ -21,33 +21,15 @@ void MainInput(Coefficients* coeffs){
 void Input(double* coeff, char sym){
     printf(PURPLE_TEXT ORANGE_BG "Enter %c-coefficient:\n" CLEAR, sym);
 
-    unsigned short test = 0; // Для проверки scanf()
-    char c = 0; // Для проверки getchar()
-    int SlavikKleukin = 6; // Флаг для while()
-    while(SlavikKleukin != 0){ //TODO
-        
-        if(scanf("%lg", coeff) == 1){
-            
-            if((c = getchar()) != '\n'){
-                printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
-                FuncClear();    //  Очистка
-            }
-            else{
-                SlavikKleukin = 0; // Конец while()
-            }
-
-        }
-        else{
-            printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
-            FuncClear(); // Очистка
-        }
-    }
+    //unsigned short test = 0; // Для проверки scanf()
+    while(FuncScanf(coeff) != SUCCESS);
 }
 
 //  Очистка ввода
-void FuncClear(){
+void BufferClean(){
     char c = 0;
-    while((c = getchar()) != '\n');
+    while((c = (char)getchar()) != '\n');
+    //printf("3\n");
 }
 
 //  "Введите коэфы пж"
@@ -55,4 +37,28 @@ void PrintInput(){
     printf(PURPLE_TEXT ORANGE_BG "# Solving square equations: ax^2 + bx + c = 0\n" CLEAR);
     printf(PURPLE_TEXT ORANGE_BG "# (c) MIM \n" CLEAR);
     printf(PURPLE_TEXT ORANGE_BG "# Enter a, b, c:\n" CLEAR);
+}
+
+Error_or_Success FuncScanf(double* coeff){
+    if(scanf("%lg", coeff) != 1){
+        printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
+        BufferClean();
+        return ERRROR;
+    }
+    //printf("1\n");
+    while(1){
+        char c = (char)getchar();
+        if(c == ' ' || c == '\t'){
+            continue;
+        }
+        else if(c == '\n'){
+            return SUCCESS;
+        }
+        else{
+            printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
+            BufferClean();
+            return ERRROR;
+        }
+
+    }
 }
