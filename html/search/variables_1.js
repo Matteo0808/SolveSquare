@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['roots_56',['roots',['../struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb',1,'Equation']]]
+  ['eps_68',['EPS',['../_const_8h.html#afe01386a82fedc016455a43c20280a97',1,'Const.h']]]
 ];

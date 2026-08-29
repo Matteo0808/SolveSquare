@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Input.h File Reference</div>  </div>
@@ -73,13 +74,24 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;Const.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_const_8h_source.html">Const.h</a>&quot;</code><br />
 </div>
 <p><a href="_input_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad3320870b1a481e66d5500944fb78c1b"><td class="memItemLeft" align="right" valign="top"><a id="ad3320870b1a481e66d5500944fb78c1b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#ad3320870b1a481e66d5500944fb78c1b">MAKECHAR</a>(sym)&#160;&#160;&#160;#sym[0]</td></tr>
+<tr class="memdesc:ad3320870b1a481e66d5500944fb78c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">define to make char from letter <br /></td></tr>
+<tr class="separator:ad3320870b1a481e66d5500944fb78c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440e13161a81c9802328631dd77c69eb"><td class="memItemLeft" align="right" valign="top"><a id="a440e13161a81c9802328631dd77c69eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#a440e13161a81c9802328631dd77c69eb">SAFEINPUT</a>(coefficient)&#160;&#160;&#160;<a class="el" href="_input_8h.html#a910c8e7d57651765784edd7f9fb780c6">Input</a>(&amp;(coeffs-&gt;coefficient), <a class="el" href="_input_8h.html#ad3320870b1a481e66d5500944fb78c1b">MAKECHAR</a>(coefficient))</td></tr>
+<tr class="memdesc:a440e13161a81c9802328631dd77c69eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">define of general input <br /></td></tr>
+<tr class="separator:a440e13161a81c9802328631dd77c69eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6da28026e047fe1bb851efb945197e44"><td class="memItemLeft" align="right" valign="top">Error_or_Success&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a> (double *coeff)</td></tr>
+<tr class="memitem:a6da28026e047fe1bb851efb945197e44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a> (double *coeff)</td></tr>
 <tr class="memdesc:a6da28026e047fe1bb851efb945197e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entering coefficient with checking for erroneous input.  <a href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">More...</a><br /></td></tr>
 <tr class="separator:a6da28026e047fe1bb851efb945197e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f1c8470c8414207f245303c1bfffc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_input_8h.html#a38f1c8470c8414207f245303c1bfffc0">MainInput</a> (<a class="el" href="struct_coefficients.html">Coefficients</a> *coeff)</td></tr>
@@ -107,7 +119,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_inp
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Error_or_Success FuncScanf </td>
+          <td class="memname"><a class="el" href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a> FuncScanf </td>
           <td>(</td>
           <td class="paramtype">double *&#160;</td>
           <td class="paramname"><em>coeff</em></td><td>)</td>

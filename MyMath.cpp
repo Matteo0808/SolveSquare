@@ -36,12 +36,12 @@ Case SolveSquare(Coefficients coeffs, Roots *roots)
 
     if (!IsEqual(coeffs.a, 0))
     {
-        double D = 0;
+        double D = 0; ///< discriminant
         D = coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c;
         if (D > EPS)
         { //  Погрешность EPS = 1e-6
 
-            double sqrt_D = 0;
+            double sqrt_D = 0; ///< square root of discriminant
             sqrt_D = sqrt(D);
 
             roots->x1 = (-coeffs.b + sqrt_D) / (2 * coeffs.a); // больший корень
@@ -99,10 +99,10 @@ void SolveComplex(Coefficients coeffs, Roots *roots)
 {
     MyAssert(roots);
 
-    double D_complex = 0;
+    double D_complex = 0; ///< disriminant for eqaution with complex roots multiplied by -1
     D_complex = -1 * (coeffs.b * coeffs.b - 4 * coeffs.a * coeffs.c);
 
-    double sqrt_D_complex = 0;
+    double sqrt_D_complex = 0; ///< sqaure_root of complex discriminant
     sqrt_D_complex = sqrt(D_complex);
 
     roots->x1_real_part = (-coeffs.b) / (2 * coeffs.a);

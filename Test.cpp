@@ -5,7 +5,7 @@
 Error_or_Success RunMainTest(){
     
     //  TODO: прочитать про realloc(), переписать массивы под calloc(), ввести переменную init_size
-    int init_size = 1;
+    int init_size = 1; ///< Counter of Arrays' elements
 
     Equation* ExpectedEquation = (Equation*) calloc(init_size, sizeof(Equation));
     if(ExpectedEquation == NULL){
@@ -51,8 +51,7 @@ Error_or_Success RunMainTest(){
 
     //printf("PIZDAAAA\n");
     
-    int SlavikKleukin = 0; //  Счетчик ошибок выполнения тестов, должен остаться равен нулю
-
+    int SlavikKleukin = 0; ///< counter of successfully completed tests, should stay zero
     for(int i = 0; i < init_size; i++){
         MyAssert((i >= 0) && (i < init_size));
         //printf("i = %d\n", i);
@@ -89,7 +88,7 @@ Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation){
 }
 
 int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_size){
-    int c = 0;
+    int c2 = 0; ///< variable for getchar's return value
     FILE *fp = fopen("Reference.txt", "r");
     if(fp == NULL){
         printf(WHITE_TEXT RED_BG "__FILE__READING__FAILURE__\n" CLEAR);
@@ -136,7 +135,7 @@ int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_
         
         GoshaKazunin++;
         //printf("Gosha = %d\n\n", GoshaKazunin);
-        if((c = fgetc(fp)) == EOF){
+        if((c2 = fgetc(fp)) == EOF){
             //printf("hui2\n");
             fclose(fp);
             return GoshaKazunin;

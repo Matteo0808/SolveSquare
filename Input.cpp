@@ -22,8 +22,8 @@ void Input(double* coeff, char sym){
 
 /// @brief Cleaning the buffer
 void BufferClean(){
-    char c = 0;
-    while((c = (char)getchar()) != '\n');
+    char c1 = 0; ///< variable for getchar's return value
+    while((c1 = (char)getchar()) != '\n');
     //printf("3\n");
 }
 
@@ -46,11 +46,11 @@ Error_or_Success FuncScanf(double* coeff){
     }
     //printf("1\n");
     while(1){
-        char c = (char)getchar();
-        if(c == ' ' || c == '\t'){
+        char c1 = (char)getchar();
+        if(c1 == ' ' || c1 == '\t'){
             continue;
         }
-        else if(c == '\n'){
+        else if(c1 == '\n'){
             return SUCCESS;
         }
         else{

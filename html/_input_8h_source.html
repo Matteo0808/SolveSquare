@@ -71,26 +71,32 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define INPUT_H_</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Const.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_const_8h.html">Const.h</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;Error_or_Success <a class="code" href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a>(<span class="keywordtype">double</span>* coeff);</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_input_8h.html#ad3320870b1a481e66d5500944fb78c1b">   15</a></span>&#160;<span class="preprocessor">#define MAKECHAR(sym) #sym[0]</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_input_8h.html#a440e13161a81c9802328631dd77c69eb">   18</a></span>&#160;<span class="preprocessor">#define SAFEINPUT(coefficient) Input(&amp;(coeffs-&gt;coefficient), MAKECHAR(coefficient))</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#a38f1c8470c8414207f245303c1bfffc0">MainInput</a>(<a class="code" href="struct_coefficients.html">Coefficients</a>* coeff);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#aa302e19517af59094bacb70ff6b5e309">PrintInput</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#a910c8e7d57651765784edd7f9fb780c6">Input</a>(<span class="keywordtype">double</span>* coeff, <span class="keywordtype">char</span> sym);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#aaaf7eb8d2ce4295b13f741cf7a2ad9f1">BufferClean</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a> <a class="code" href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a>(<span class="keywordtype">double</span>* coeff);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#a38f1c8470c8414207f245303c1bfffc0">MainInput</a>(<a class="code" href="struct_coefficients.html">Coefficients</a>* coeff);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#aa302e19517af59094bacb70ff6b5e309">PrintInput</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#a910c8e7d57651765784edd7f9fb780c6">Input</a>(<span class="keywordtype">double</span>* coeff, <span class="keywordtype">char</span> sym);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_input_8h.html#aaaf7eb8d2ce4295b13f741cf7a2ad9f1">BufferClean</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="a_input_8h_html_a910c8e7d57651765784edd7f9fb780c6"><div class="ttname"><a href="_input_8h.html#a910c8e7d57651765784edd7f9fb780c6">Input</a></div><div class="ttdeci">void Input(double *coeff, char sym)</div><div class="ttdoc">Input of each coefficient.</div><div class="ttdef"><b>Definition:</b> Input.cpp:22</div></div>
-<div class="ttc" id="astruct_coefficients_html"><div class="ttname"><a href="struct_coefficients.html">Coefficients</a></div><div class="ttdoc">Struct of coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:31</div></div>
-<div class="ttc" id="a_input_8h_html_a6da28026e047fe1bb851efb945197e44"><div class="ttname"><a href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a></div><div class="ttdeci">Error_or_Success FuncScanf(double *coeff)</div><div class="ttdoc">Entering coefficient with checking for erroneous input.</div><div class="ttdef"><b>Definition:</b> Input.cpp:46</div></div>
-<div class="ttc" id="a_input_8h_html_aa302e19517af59094bacb70ff6b5e309"><div class="ttname"><a href="_input_8h.html#aa302e19517af59094bacb70ff6b5e309">PrintInput</a></div><div class="ttdeci">void PrintInput()</div><div class="ttdoc">Intro text printing.</div><div class="ttdef"><b>Definition:</b> Input.cpp:36</div></div>
-<div class="ttc" id="a_input_8h_html_aaaf7eb8d2ce4295b13f741cf7a2ad9f1"><div class="ttname"><a href="_input_8h.html#aaaf7eb8d2ce4295b13f741cf7a2ad9f1">BufferClean</a></div><div class="ttdeci">void BufferClean()</div><div class="ttdoc">Cleaning the buffer.</div><div class="ttdef"><b>Definition:</b> Input.cpp:29</div></div>
-<div class="ttc" id="a_input_8h_html_a38f1c8470c8414207f245303c1bfffc0"><div class="ttname"><a href="_input_8h.html#a38f1c8470c8414207f245303c1bfffc0">MainInput</a></div><div class="ttdeci">void MainInput(Coefficients *coeff)</div><div class="ttdoc">This function is called in main to start input.</div><div class="ttdef"><b>Definition:</b> Input.cpp:12</div></div>
+<div class="ttc" id="a_const_8h_html_aba81e5fa19756eb20605a6cc2aad6e63"><div class="ttname"><a href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a></div><div class="ttdeci">Error_or_Success</div><div class="ttdoc">Returns of error and success.</div><div class="ttdef"><b>Definition:</b> Const.h:18</div></div>
+<div class="ttc" id="a_input_8h_html_a910c8e7d57651765784edd7f9fb780c6"><div class="ttname"><a href="_input_8h.html#a910c8e7d57651765784edd7f9fb780c6">Input</a></div><div class="ttdeci">void Input(double *coeff, char sym)</div><div class="ttdoc">Input of each coefficient.</div><div class="ttdef"><b>Definition:</b> Input.cpp:17</div></div>
+<div class="ttc" id="astruct_coefficients_html"><div class="ttname"><a href="struct_coefficients.html">Coefficients</a></div><div class="ttdoc">Struct of coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:34</div></div>
+<div class="ttc" id="a_input_8h_html_a6da28026e047fe1bb851efb945197e44"><div class="ttname"><a href="_input_8h.html#a6da28026e047fe1bb851efb945197e44">FuncScanf</a></div><div class="ttdeci">Error_or_Success FuncScanf(double *coeff)</div><div class="ttdoc">Entering coefficient with checking for erroneous input.</div><div class="ttdef"><b>Definition:</b> Input.cpp:41</div></div>
+<div class="ttc" id="a_input_8h_html_aa302e19517af59094bacb70ff6b5e309"><div class="ttname"><a href="_input_8h.html#aa302e19517af59094bacb70ff6b5e309">PrintInput</a></div><div class="ttdeci">void PrintInput()</div><div class="ttdoc">Intro text printing.</div><div class="ttdef"><b>Definition:</b> Input.cpp:31</div></div>
+<div class="ttc" id="a_input_8h_html_aaaf7eb8d2ce4295b13f741cf7a2ad9f1"><div class="ttname"><a href="_input_8h.html#aaaf7eb8d2ce4295b13f741cf7a2ad9f1">BufferClean</a></div><div class="ttdeci">void BufferClean()</div><div class="ttdoc">Cleaning the buffer.</div><div class="ttdef"><b>Definition:</b> Input.cpp:24</div></div>
+<div class="ttc" id="a_input_8h_html_a38f1c8470c8414207f245303c1bfffc0"><div class="ttname"><a href="_input_8h.html#a38f1c8470c8414207f245303c1bfffc0">MainInput</a></div><div class="ttdeci">void MainInput(Coefficients *coeff)</div><div class="ttdoc">This function is called in main to start input.</div><div class="ttdef"><b>Definition:</b> Input.cpp:7</div></div>
+<div class="ttc" id="a_const_8h_html"><div class="ttname"><a href="_const_8h.html">Const.h</a></div><div class="ttdoc">Structs, consts, enums, defines.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

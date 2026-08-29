@@ -1,10 +1,10 @@
 /**
- * @file Const.h
+ * @file Config.h
  * @brief Structs, consts, enums, defines
 */
 
-#ifndef CONST_H_   
-#define CONST_H_
+#ifndef CONFIG_H   
+#define CONFIG_H
 #include <stdio.h>
 
 //#define CONTINUE 2
@@ -32,9 +32,9 @@ enum Case {
 
 /// @brief Struct of coefficients
 struct Coefficients {
-    double a; ///< 
-    double b;
-    double c;
+    double a; ///< a-coefficient
+    double b; ///< b-coefficient
+    double c; ///< c-coefficient
 };
 
 /// @brief Struct of roots

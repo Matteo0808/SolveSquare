@@ -3,7 +3,6 @@
  * @brief Need for debug
 */
 
-#include <assert.h>
 #ifndef MYASSERT_H_
 #define MYASSERT_H_
 #include <stdio.h>

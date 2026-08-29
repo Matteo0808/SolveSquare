@@ -66,77 +66,79 @@ $(function() {
 <div class="title">Const.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Константы</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef CONST_H_   </span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define CONST_H_</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//#define CONTINUE 2</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// #define ERRROR 1</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// #define SUCCESS 0</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> EPS = 1e-6;</div>
+<a href="_const_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef CONST_H_   </span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define CONST_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//#define CONTINUE 2</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// #define ERRROR 1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// #define SUCCESS 0</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">enum</span> Error_or_Success {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ERRROR = -1,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    SUCCESS = 0</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">enum</span> Case {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    No_Roots_In_Real_Numbers = 0,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Infinite_Number_Of_Roots = 1,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    No_Roots = 2,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    One_Root_Zero_A = 3,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Two_Roots = 4,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    One_Root_Zero_D = 5</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="struct_coefficients.html">   31</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_coefficients.html">Coefficients</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">double</span> a; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">double</span> b;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">double</span> c;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_roots.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_roots.html">Roots</a> {</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">   39</a></span>&#160;    Case <a class="code" href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">case_solution</a>; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">   40</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">x1</a>; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">   41</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">x2</a>; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">   42</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">x_for_zero_a</a>; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">   43</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">x_for_zero_D</a>; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">   44</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">x1_real_part</a>; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">   45</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">x1_imagine_part</a>; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="struct_equation.html">   49</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_equation.html">Equation</a> {</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">   50</a></span>&#160;    <a class="code" href="struct_coefficients.html">Coefficients</a> <a class="code" href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">coeffs</a>; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">   51</a></span>&#160;    <a class="code" href="struct_roots.html">Roots</a> <a class="code" href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">roots</a>; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">    #define RED_TEXT &quot;\033[91m&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    #define RED_BG &quot;\033[101m&quot;</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">    #define PURPLE_TEXT &quot;\033[95m&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">    #define PURPLE_BG &quot;\033[105m&quot;</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    #define ORANGE_TEXT &quot;\033[93m&quot;</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    #define ORANGE_BG &quot;\033[103m&quot;</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">    #define GREEN_BG &quot;\e[42m&quot;</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    #define WHITE_TEXT &quot;\e[0;37m&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">    #define CLEAR  &quot;\033[0m&quot;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_const_8h.html#afe01386a82fedc016455a43c20280a97">   15</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="_const_8h.html#afe01386a82fedc016455a43c20280a97">EPS</a> = 1e-6;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">   18</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ERRROR = -1,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    SUCCESS = 0</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_const_8h.html#ab9aab17a5e54a8bae6915bc24db13a17">   24</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="_const_8h.html#ab9aab17a5e54a8bae6915bc24db13a17">Case</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    No_Roots_In_Real_Numbers = 0,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Infinite_Number_Of_Roots = 1,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    No_Roots = 2,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    One_Root_Zero_A = 3,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    Two_Roots = 4,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    One_Root_Zero_D = 5</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="struct_coefficients.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_coefficients.html">Coefficients</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">double</span> a; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">double</span> b;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">double</span> c;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="struct_roots.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_roots.html">Roots</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">   42</a></span>&#160;    <a class="code" href="_const_8h.html#ab9aab17a5e54a8bae6915bc24db13a17">Case</a> <a class="code" href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">case_solution</a>; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">   43</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">x1</a>; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">   44</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">x2</a>; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">   45</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">x_for_zero_a</a>; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">   46</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">x_for_zero_D</a>; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">   47</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">x1_real_part</a>; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">   48</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">x1_imagine_part</a>; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="struct_equation.html">   52</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_equation.html">Equation</a> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">   53</a></span>&#160;    <a class="code" href="struct_coefficients.html">Coefficients</a> <a class="code" href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">coeffs</a>; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">   54</a></span>&#160;    <a class="code" href="struct_roots.html">Roots</a> <a class="code" href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">roots</a>; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_const_8h.html#ac6b49286f191080eef7f1891a32b6596">   58</a></span>&#160;<span class="preprocessor">    #define RED_TEXT &quot;\033[91m&quot;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">    #define RED_BG &quot;\033[101m&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">    #define PURPLE_TEXT &quot;\033[95m&quot;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">    #define PURPLE_BG &quot;\033[105m&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">    #define ORANGE_TEXT &quot;\033[93m&quot;</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">    #define ORANGE_BG &quot;\033[103m&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">    #define GREEN_BG &quot;\e[42m&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">    #define WHITE_TEXT &quot;\e[0;37m&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    #define CLEAR  &quot;\033[0m&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_roots_html_ad5d72c32e49fb33f03d482529f12c297"><div class="ttname"><a href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">Roots::x1_imagine_part</a></div><div class="ttdeci">double x1_imagine_part</div><div class="ttdoc">imaginary part of complex root</div><div class="ttdef"><b>Definition:</b> Const.h:45</div></div>
-<div class="ttc" id="astruct_equation_html_a6186c1ee9a7a216f8f34cf4c637e7be4"><div class="ttname"><a href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">Equation::coeffs</a></div><div class="ttdeci">Coefficients coeffs</div><div class="ttdoc">Coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:50</div></div>
-<div class="ttc" id="astruct_roots_html_abb5b98e979e7c6edde9928c50f9c4408"><div class="ttname"><a href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">Roots::x_for_zero_a</a></div><div class="ttdeci">double x_for_zero_a</div><div class="ttdoc">root when a = 0</div><div class="ttdef"><b>Definition:</b> Const.h:42</div></div>
-<div class="ttc" id="astruct_roots_html"><div class="ttname"><a href="struct_roots.html">Roots</a></div><div class="ttdoc">Struct of roots.</div><div class="ttdef"><b>Definition:</b> Const.h:38</div></div>
-<div class="ttc" id="astruct_coefficients_html"><div class="ttname"><a href="struct_coefficients.html">Coefficients</a></div><div class="ttdoc">Struct of coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:31</div></div>
-<div class="ttc" id="astruct_equation_html_a1a88eeaacd7792bc63a26e970a3fe6cb"><div class="ttname"><a href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">Equation::roots</a></div><div class="ttdeci">Roots roots</div><div class="ttdoc">Roots.</div><div class="ttdef"><b>Definition:</b> Const.h:51</div></div>
-<div class="ttc" id="astruct_equation_html"><div class="ttname"><a href="struct_equation.html">Equation</a></div><div class="ttdoc">General struct of full equation.</div><div class="ttdef"><b>Definition:</b> Const.h:49</div></div>
-<div class="ttc" id="astruct_roots_html_abd3d9f308f836fc4d1b61b8d56a9d452"><div class="ttname"><a href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">Roots::x_for_zero_D</a></div><div class="ttdeci">double x_for_zero_D</div><div class="ttdoc">root when D = 0</div><div class="ttdef"><b>Definition:</b> Const.h:43</div></div>
-<div class="ttc" id="astruct_roots_html_ad43c6e099a5cbf6ad224e3896cf33645"><div class="ttname"><a href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">Roots::case_solution</a></div><div class="ttdeci">Case case_solution</div><div class="ttdoc">number of roots</div><div class="ttdef"><b>Definition:</b> Const.h:39</div></div>
-<div class="ttc" id="astruct_roots_html_a2ba5be788affd19f80ec3855cb944e88"><div class="ttname"><a href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">Roots::x2</a></div><div class="ttdeci">double x2</div><div class="ttdoc">second root</div><div class="ttdef"><b>Definition:</b> Const.h:41</div></div>
-<div class="ttc" id="astruct_roots_html_a8e03a9505f8fd16a671cdc446ce48d7a"><div class="ttname"><a href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">Roots::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">first root</div><div class="ttdef"><b>Definition:</b> Const.h:40</div></div>
-<div class="ttc" id="astruct_roots_html_a460f1e68eebdbddaa44d4906fec631d0"><div class="ttname"><a href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">Roots::x1_real_part</a></div><div class="ttdeci">double x1_real_part</div><div class="ttdoc">real part of complex root</div><div class="ttdef"><b>Definition:</b> Const.h:44</div></div>
+<div class="ttc" id="a_const_8h_html_aba81e5fa19756eb20605a6cc2aad6e63"><div class="ttname"><a href="_const_8h.html#aba81e5fa19756eb20605a6cc2aad6e63">Error_or_Success</a></div><div class="ttdeci">Error_or_Success</div><div class="ttdoc">Returns of error and success.</div><div class="ttdef"><b>Definition:</b> Const.h:18</div></div>
+<div class="ttc" id="astruct_roots_html_ad5d72c32e49fb33f03d482529f12c297"><div class="ttname"><a href="struct_roots.html#ad5d72c32e49fb33f03d482529f12c297">Roots::x1_imagine_part</a></div><div class="ttdeci">double x1_imagine_part</div><div class="ttdoc">imaginary part of complex root</div><div class="ttdef"><b>Definition:</b> Const.h:48</div></div>
+<div class="ttc" id="astruct_equation_html_a6186c1ee9a7a216f8f34cf4c637e7be4"><div class="ttname"><a href="struct_equation.html#a6186c1ee9a7a216f8f34cf4c637e7be4">Equation::coeffs</a></div><div class="ttdeci">Coefficients coeffs</div><div class="ttdoc">Coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:53</div></div>
+<div class="ttc" id="astruct_roots_html_abb5b98e979e7c6edde9928c50f9c4408"><div class="ttname"><a href="struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408">Roots::x_for_zero_a</a></div><div class="ttdeci">double x_for_zero_a</div><div class="ttdoc">root when a = 0</div><div class="ttdef"><b>Definition:</b> Const.h:45</div></div>
+<div class="ttc" id="astruct_roots_html"><div class="ttname"><a href="struct_roots.html">Roots</a></div><div class="ttdoc">Struct of roots.</div><div class="ttdef"><b>Definition:</b> Const.h:41</div></div>
+<div class="ttc" id="astruct_coefficients_html"><div class="ttname"><a href="struct_coefficients.html">Coefficients</a></div><div class="ttdoc">Struct of coefficients.</div><div class="ttdef"><b>Definition:</b> Const.h:34</div></div>
+<div class="ttc" id="a_const_8h_html_afe01386a82fedc016455a43c20280a97"><div class="ttname"><a href="_const_8h.html#afe01386a82fedc016455a43c20280a97">EPS</a></div><div class="ttdeci">const double EPS</div><div class="ttdoc">Accuracy in double numbers comparison.</div><div class="ttdef"><b>Definition:</b> Const.h:15</div></div>
+<div class="ttc" id="astruct_equation_html_a1a88eeaacd7792bc63a26e970a3fe6cb"><div class="ttname"><a href="struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb">Equation::roots</a></div><div class="ttdeci">Roots roots</div><div class="ttdoc">Roots.</div><div class="ttdef"><b>Definition:</b> Const.h:54</div></div>
+<div class="ttc" id="a_const_8h_html_ab9aab17a5e54a8bae6915bc24db13a17"><div class="ttname"><a href="_const_8h.html#ab9aab17a5e54a8bae6915bc24db13a17">Case</a></div><div class="ttdeci">Case</div><div class="ttdoc">Cases in solving quadratic equation.</div><div class="ttdef"><b>Definition:</b> Const.h:24</div></div>
+<div class="ttc" id="astruct_equation_html"><div class="ttname"><a href="struct_equation.html">Equation</a></div><div class="ttdoc">General struct of full equation.</div><div class="ttdef"><b>Definition:</b> Const.h:52</div></div>
+<div class="ttc" id="astruct_roots_html_abd3d9f308f836fc4d1b61b8d56a9d452"><div class="ttname"><a href="struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452">Roots::x_for_zero_D</a></div><div class="ttdeci">double x_for_zero_D</div><div class="ttdoc">root when D = 0</div><div class="ttdef"><b>Definition:</b> Const.h:46</div></div>
+<div class="ttc" id="astruct_roots_html_ad43c6e099a5cbf6ad224e3896cf33645"><div class="ttname"><a href="struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645">Roots::case_solution</a></div><div class="ttdeci">Case case_solution</div><div class="ttdoc">number of roots</div><div class="ttdef"><b>Definition:</b> Const.h:42</div></div>
+<div class="ttc" id="astruct_roots_html_a2ba5be788affd19f80ec3855cb944e88"><div class="ttname"><a href="struct_roots.html#a2ba5be788affd19f80ec3855cb944e88">Roots::x2</a></div><div class="ttdeci">double x2</div><div class="ttdoc">second root</div><div class="ttdef"><b>Definition:</b> Const.h:44</div></div>
+<div class="ttc" id="astruct_roots_html_a8e03a9505f8fd16a671cdc446ce48d7a"><div class="ttname"><a href="struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a">Roots::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">first root</div><div class="ttdef"><b>Definition:</b> Const.h:43</div></div>
+<div class="ttc" id="astruct_roots_html_a460f1e68eebdbddaa44d4906fec631d0"><div class="ttname"><a href="struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0">Roots::x1_real_part</a></div><div class="ttdeci">double x1_real_part</div><div class="ttdoc">real part of complex root</div><div class="ttdef"><b>Definition:</b> Const.h:47</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
