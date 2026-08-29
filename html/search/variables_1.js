@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['eps_68',['EPS',['../_const_8h.html#afe01386a82fedc016455a43c20280a97',1,'Const.h']]]
+  ['b_70',['b',['../struct_coefficients.html#ac8453ba82f253f66045a84645d001c37',1,'Coefficients']]]
 ];
