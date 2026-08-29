@@ -39,6 +39,7 @@ void PrintInput(){
     printf(PURPLE_TEXT ORANGE_BG "# Enter a, b, c:\n" CLEAR);
 }
 
+//  Сканирование
 Error_or_Success FuncScanf(double* coeff){
     if(scanf("%lg", coeff) != 1){
         printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);
@@ -59,6 +60,5 @@ Error_or_Success FuncScanf(double* coeff){
             BufferClean();
             return ERRROR;
         }
-
     }
 }

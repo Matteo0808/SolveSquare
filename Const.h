@@ -15,8 +15,8 @@ const double EPS = 1e-6;
 
 //  Returns
 enum Error_or_Success {
-    SUCCESS = 0,
-    ERRROR = 1
+    ERRROR = -1,
+    SUCCESS = 0
 };
 
 //  Случаи при решении квадратных уравнений
