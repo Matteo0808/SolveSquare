@@ -7,6 +7,8 @@
 //#define STOPMYASSERT                          // Отключение ассертов
 
 #ifndef STOPMYASSERT
+
+/// @brief Checking the assertion
 #define MyAssert(Bool) if(Bool == 0)\
 {\
     do{\

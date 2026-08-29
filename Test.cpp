@@ -2,7 +2,9 @@
 
 #include "Test.h"
 
-//  Запуск тестировки 
+/// @brief Start of testing
+/// @return ERRROR - Error in testing\
+/// @return SUCCESS - Testing done successfully
 Error_or_Success RunMainTest(){
     
     //  TODO: прочитать про realloc(), переписать массивы под calloc(), ввести переменную init_size
@@ -37,7 +39,7 @@ Error_or_Success RunMainTest(){
         free(TestEquation);
         return ERRROR; //  Ошибка считывания
     }
-    //printf("HUIIIIII\n");
+    //rintf("HUIIIIII\n");
     ExpectedEquation = (Equation* ) realloc(ExpectedEquation, init_size * sizeof(Equation));
     if(ExpectedEquation == NULL){
         printf("Error in ee\n");
@@ -74,21 +76,14 @@ Error_or_Success RunMainTest(){
     return SUCCESS;
 }
 
-//  Запуск каждого теста
+/// @brief Start of each test
+/// @param ExpectedEquation Struct with reference values to compare gotten roots
+/// @param TestEquation Struct to keep values gotten in test
+/// @return ERRROR - Error in testing\
+/// @return SUCCESS - Testing done successfully
 Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation){
     TestEquation.roots.case_solution = SolveSquare(TestEquation.coeffs, &(TestEquation.roots));
-    // printf("case = %d \nx1 = %lg \nx2 = %lg \nxa = %lg \nxd = %lg \nx1r = %lg \nx1i = %lg\n\n\n",
-    //                 ExpectedEquation.roots.case_solution,
-    //                 ExpectedEquation.roots.x1, ExpectedEquation.roots.x2,
-    //                 ExpectedEquation.roots.x_for_zero_a, ExpectedEquation.roots.x_for_zero_D, 
-    //                 ExpectedEquation.roots.x1_real_part, ExpectedEquation.roots.x1_imagine_part);
-    // printf("a = %lg \nb = %lg \nc = %lg \ncase = %d \nx1 = %lg \nx2 = %lg \nxa = %lg \nxd = %lg \nx1r = %lg \nx1i = %lg\n\n\n",
-    //                 TestEquation.coeffs.a, TestEquation.coeffs.b, TestEquation.coeffs.c,
-    //                 TestEquation.roots.case_solution,
-    //                 TestEquation.roots.x1, TestEquation.roots.x2,
-    //                 TestEquation.roots.x_for_zero_a, TestEquation.roots.x_for_zero_D, 
-    //                 TestEquation.roots.x1_real_part, TestEquation.roots.x1_imagine_part);                 //  Дебаг
-    
+        
     if(TestEquation.roots.case_solution == ExpectedEquation.roots.case_solution &&
         IsEqual(TestEquation.roots.x1, ExpectedEquation.roots.x1) &&
         IsEqual(TestEquation.roots.x2, ExpectedEquation.roots.x2) &&
@@ -101,13 +96,18 @@ Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation){
     return ERRROR;
 }
 
-//  Считывание тестовых значений из файла
+/// @brief Skanning reference values from file
+/// @param TestEquation Pointer to pointer to struct to reallocate the memory
+/// @param ExpectedEquation pointer to pointer to struct to reallocate the memory
+/// @param init_size Size of array
+/// @return ERRROR - Error in scanning from file\
+/// @return GoshaKazunin - Size of array
 int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_size){
     int c = 0;
     FILE *fp = fopen("Reference.txt", "r");
     if(fp == NULL){
         printf(WHITE_TEXT RED_BG "__FILE__READING__FAILURE__\n" CLEAR);
-        return 0;
+        return ERRROR;
     }
 
     int GoshaKazunin = 0;
@@ -158,7 +158,9 @@ int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_
     }
 }
 
-
+/// @brief Print of struct, need for debug
+/// @param Equ struct to print
+/// @param str name of struct
 void printEqu(Equation Equ, char str[]){
     printf("%s:\na = %lg b = %lg c = %lg case = %d x1 = %lg x2 = %lg xa = %lg xd = %lg xreal = %lg xi = %lg\n", str,
                         (Equ.coeffs.a), (Equ.coeffs.b), (Equ.coeffs.c), 
@@ -168,17 +170,9 @@ void printEqu(Equation Equ, char str[]){
                         (Equ.roots.x1_real_part), (Equ.roots.x1_imagine_part));
 }
 
-void ReallocNull(Equation* Equ, int size){
+/// @brief Realloc wrapper, replaces garbage values to zero
+/// @param Equ Array of structs, that need to clean
+/// @param size NewSize - OldSize(by realloc) = OldSize, becouse NewSize = 2*OldSize 
+void ReallocNull(Equation* Equ, int size){ 
     memset(Equ + size/sizeof(Equation), 0, size );
 }
-/*
-
-double* a = 0x100;
-a += 1;
-// a = 108
-
-Equation* equ = 0x100;
-equ += size;
-// equ = 0x110
-
-*/

@@ -8,18 +8,16 @@
 // #define ERRROR 1
 // #define SUCCESS 0
 
-const unsigned short MAX = 5;
-
-// Погрешность
+/// @brief Accuracy in double numbers comparison
 const double EPS = 1e-6;
 
-//  Returns
+/// @brief Returns of error and success
 enum Error_or_Success {
     ERRROR = -1,
     SUCCESS = 0
 };
 
-//  Случаи при решении квадратных уравнений
+/// @brief Cases in solving quadratic equation
 enum Case {
     No_Roots_In_Real_Numbers = 0,
     Infinite_Number_Of_Roots = 1,
@@ -29,14 +27,14 @@ enum Case {
     One_Root_Zero_D = 5
 };
 
-//  Коэффициенты квадратного уравнения
+/// @brief Struct of coefficients
 struct Coefficients {
     double a;
     double b;
     double c;
 };
 
-// Все составляющие квадратного уравнения
+/// @brief Struct of roots
 struct Roots {
     Case case_solution;
     double x1;
@@ -47,13 +45,13 @@ struct Roots {
     double x1_imagine_part;
 };
 
-//  Общая структура уравнения
+/// @brief General struct of full equation
 struct Equation {
     Coefficients coeffs;
     Roots roots;
 };
 
-// Цвета
+/// @brief Colors' cods
     #define RED_TEXT "\033[91m"
     #define RED_BG "\033[101m"
     #define PURPLE_TEXT "\033[95m"

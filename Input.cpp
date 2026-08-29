@@ -2,44 +2,47 @@
 
 #include "Input.h"
 
-//  Переделка в символ
 #define MAKECHAR(sym) #sym[0]
 
 //  Макрос для общего вызова Input
 #define SAFEINPUT(coefficient) Input(&(coeffs->coefficient), MAKECHAR(coefficient))
 
-//  Главный ввод
+/// @brief This function is called in main to start input
+/// @param coeffs Pointer to the coefficients that will be changed
 void MainInput(Coefficients* coeffs){
     PrintInput();   // "Введи коэфы пж"
     SAFEINPUT(a);
     SAFEINPUT(b);
     SAFEINPUT(c);
-    //printf("%lg %lg %lg\n", coeffs->a, coeffs->b, coeffs->c);
 }
 
-//  Ввод
+/// @brief Input of each coefficient
+/// @param coeff Pointer to each coefficient
+/// @param sym char symbol of coefficient
 void Input(double* coeff, char sym){
     printf(PURPLE_TEXT ORANGE_BG "Enter %c-coefficient:\n" CLEAR, sym);
 
-    //unsigned short test = 0; // Для проверки scanf()
     while(FuncScanf(coeff) != SUCCESS);
 }
 
-//  Очистка ввода
+/// @brief Cleaning the buffer
 void BufferClean(){
     char c = 0;
     while((c = (char)getchar()) != '\n');
     //printf("3\n");
 }
 
-//  "Введите коэфы пж"
+/// @brief Printing start text
 void PrintInput(){
     printf(PURPLE_TEXT ORANGE_BG "# Solving square equations: ax^2 + bx + c = 0\n" CLEAR);
     printf(PURPLE_TEXT ORANGE_BG "# (c) MIM \n" CLEAR);
     printf(PURPLE_TEXT ORANGE_BG "# Enter a, b, c:\n" CLEAR);
 }
 
-//  Сканирование
+/// @brief Entering coefficient with checking for erroneous input
+/// @param coeff Each coefficient
+/// @return ERRROR - program exits with an error\
+/// @return SUCCESS - program completed successfully
 Error_or_Success FuncScanf(double* coeff){
     if(scanf("%lg", coeff) != 1){
         printf(PURPLE_TEXT ORANGE_BG "You've made a mistake entering, please try again:\n" CLEAR);

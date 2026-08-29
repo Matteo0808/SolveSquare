@@ -19,15 +19,6 @@
 
 int main(){
     
-    // TODO: исправить пробелы, переисать int на Case, исправить ифы, переделать solve нахуй
-    // ask: abort(), разделение структуры, про потоки _thread_local и _Atomic 
-    // learn: __VA_ARGS__, malloc(), calloc(), free()
-
-    // for(int i = 0; i < 256; i++){
-    //     printf("%d = %c\n", i, i);                       //     All chars
-    // }
-    // return 0;
-    
     struct Equation MainEquation = {}; //   Все параменты квадратки
 
     // Тест
