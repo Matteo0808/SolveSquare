@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['makechar_84',['MAKECHAR',['../_input_8h.html#ad3320870b1a481e66d5500944fb78c1b',1,'Input.h']]],
-  ['myassert_85',['MyAssert',['../_my_assert_8h.html#a314fcab5b884ca9d21e40e0b784629e7',1,'MyAssert.h']]]
+  ['clear_128',['CLEAR',['../_config_8h.html#a611cc9b5f655508482f3d7a9751c182a',1,'Config.h']]]
 ];

@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['x1_38',['x1',['../struct_roots.html#a8e03a9505f8fd16a671cdc446ce48d7a',1,'Roots']]],
-  ['x1_5fimagine_5fpart_39',['x1_imagine_part',['../struct_roots.html#ad5d72c32e49fb33f03d482529f12c297',1,'Roots']]],
-  ['x1_5freal_5fpart_40',['x1_real_part',['../struct_roots.html#a460f1e68eebdbddaa44d4906fec631d0',1,'Roots']]],
-  ['x2_41',['x2',['../struct_roots.html#a2ba5be788affd19f80ec3855cb944e88',1,'Roots']]],
-  ['x_5ffor_5fzero_5fa_42',['x_for_zero_a',['../struct_roots.html#abb5b98e979e7c6edde9928c50f9c4408',1,'Roots']]],
-  ['x_5ffor_5fzero_5fd_43',['x_for_zero_D',['../struct_roots.html#abd3d9f308f836fc4d1b61b8d56a9d452',1,'Roots']]]
+  ['readme_2emd_44',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['reallocnull_45',['ReallocNull',['../_test_8cpp.html#a9648b689775a99e22baaada8da04739b',1,'ReallocNull(Equation *Equ, int size):&#160;Test.cpp'],['../_test_8h.html#a9648b689775a99e22baaada8da04739b',1,'ReallocNull(Equation *Equ, int size):&#160;Test.cpp']]],
+  ['red_5fbg_46',['RED_BG',['../_config_8h.html#af9530a4ab1350a85fba3d8935ec6b06c',1,'Config.h']]],
+  ['red_5ftext_47',['RED_TEXT',['../_config_8h.html#ac6b49286f191080eef7f1891a32b6596',1,'Config.h']]],
+  ['reference_2etxt_48',['Reference.txt',['../_reference_8txt.html',1,'']]],
+  ['roots_49',['Roots',['../struct_roots.html',1,'Roots'],['../struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb',1,'Equation::roots()']]],
+  ['runmaintest_50',['RunMainTest',['../_test_8cpp.html#ab5eef13cc7867360546bcb784ffe6acc',1,'RunMainTest():&#160;Test.cpp'],['../_test_8h.html#ab5eef13cc7867360546bcb784ffe6acc',1,'RunMainTest():&#160;Test.cpp']]],
+  ['runtest_51',['RunTest',['../_test_8cpp.html#a216dfc46814f34f0674f8b4cb4b1396d',1,'RunTest(Equation ExpectedEquation, Equation TestEquation):&#160;Test.cpp'],['../_test_8h.html#a216dfc46814f34f0674f8b4cb4b1396d',1,'RunTest(Equation ExpectedEquation, Equation TestEquation):&#160;Test.cpp']]]
 ];

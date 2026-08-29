@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['reallocnull_26',['ReallocNull',['../_test_8h.html#a9648b689775a99e22baaada8da04739b',1,'Test.cpp']]],
-  ['red_5ftext_27',['RED_TEXT',['../_config_8h.html#ac6b49286f191080eef7f1891a32b6596',1,'Config.h']]],
-  ['roots_28',['Roots',['../struct_roots.html',1,'Roots'],['../struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb',1,'Equation::roots()']]],
-  ['runmaintest_29',['RunMainTest',['../_test_8h.html#ab5eef13cc7867360546bcb784ffe6acc',1,'Test.cpp']]],
-  ['runtest_30',['RunTest',['../_test_8h.html#a216dfc46814f34f0674f8b4cb4b1396d',1,'Test.cpp']]]
+  ['no_5froots_33',['No_Roots',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a23d76307e018e0f7afb899e91b099492',1,'Config.h']]],
+  ['no_5froots_5fin_5freal_5fnumbers_34',['No_Roots_In_Real_Numbers',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a4ef74ecac77d376ce93db56af8c8000b',1,'Config.h']]]
 ];

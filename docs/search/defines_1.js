@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['red_5ftext_86',['RED_TEXT',['../_config_8h.html#ac6b49286f191080eef7f1891a32b6596',1,'Config.h']]]
+  ['green_5fbg_129',['GREEN_BG',['../_config_8h.html#a0a004077b5a51ea120d37c7137e7132f',1,'Config.h']]]
 ];

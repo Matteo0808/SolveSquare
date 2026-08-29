@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['roots_75',['roots',['../struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb',1,'Equation']]]
+  ['eps_108',['EPS',['../_config_8h.html#afe01386a82fedc016455a43c20280a97',1,'Config.h']]],
+  ['expectedequation_109',['ExpectedEquation',['../doxygen__log_8txt.html#a471a8f1a65e477a9b9c1e38dee134a3c',1,'doxygen_log.txt']]]
 ];
