@@ -1,3 +1,14 @@
+/**
+ **********************************
+ * @file    main.cpp
+ * @author  Matteo0808
+ * @version 1.0
+ * @date    29-august-2026
+ * @brief   Quadratic Square Solver
+ **********************************
+ */
+
+
 #include <stdio.h>
 #include <math.h>
 //#define NDEBUG

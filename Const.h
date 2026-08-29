@@ -36,19 +36,19 @@ struct Coefficients {
 
 /// @brief Struct of roots
 struct Roots {
-    Case case_solution;
-    double x1;
-    double x2;
-    double x_for_zero_a;
-    double x_for_zero_D;
-    double x1_real_part;
-    double x1_imagine_part;
+    Case case_solution; ///< number of roots
+    double x1; ///< first root
+    double x2; ///< second root
+    double x_for_zero_a; ///< root when a = 0
+    double x_for_zero_D; ///< root when D = 0
+    double x1_real_part; ///< real part of complex root
+    double x1_imagine_part; ///< imaginary part of complex root
 };
 
 /// @brief General struct of full equation
 struct Equation {
-    Coefficients coeffs;
-    Roots roots;
+    Coefficients coeffs; ///< Coefficients
+    Roots roots; ///< Roots
 };
 
 /// @brief Colors' cods

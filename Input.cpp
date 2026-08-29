@@ -32,7 +32,7 @@ void BufferClean(){
     //printf("3\n");
 }
 
-/// @brief Printing start text
+/// @brief Intro text printing
 void PrintInput(){
     printf(PURPLE_TEXT ORANGE_BG "# Solving square equations: ax^2 + bx + c = 0\n" CLEAR);
     printf(PURPLE_TEXT ORANGE_BG "# (c) MIM \n" CLEAR);
