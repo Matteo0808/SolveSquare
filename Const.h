@@ -1,4 +1,7 @@
-//  Константы
+/**
+ * @file Const.h
+ * @brief Structs, consts, enums, defines
+*/
 
 #ifndef CONST_H_   
 #define CONST_H_
@@ -29,7 +32,7 @@ enum Case {
 
 /// @brief Struct of coefficients
 struct Coefficients {
-    double a;
+    double a; ///< 
     double b;
     double c;
 };

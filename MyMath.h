@@ -1,3 +1,9 @@
+/**
+ * @file MyMath.h
+ * @brief All mathematic needs in program
+*/
+
+
 #ifndef MYMATH_H_
 #define MYMATH_H_
 

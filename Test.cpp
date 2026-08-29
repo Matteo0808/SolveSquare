@@ -2,9 +2,6 @@
 
 #include "Test.h"
 
-/// @brief Start of testing
-/// @return ERRROR - Error in testing\
-/// @return SUCCESS - Testing done successfully
 Error_or_Success RunMainTest(){
     
     //  TODO: прочитать про realloc(), переписать массивы под calloc(), ввести переменную init_size
@@ -76,11 +73,6 @@ Error_or_Success RunMainTest(){
     return SUCCESS;
 }
 
-/// @brief Start of each test
-/// @param ExpectedEquation Struct with reference values to compare gotten roots
-/// @param TestEquation Struct to keep values gotten in test
-/// @return ERRROR - Error in testing\
-/// @return SUCCESS - Testing done successfully
 Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation){
     TestEquation.roots.case_solution = SolveSquare(TestEquation.coeffs, &(TestEquation.roots));
         
@@ -96,12 +88,6 @@ Error_or_Success RunTest(Equation ExpectedEquation, Equation TestEquation){
     return ERRROR;
 }
 
-/// @brief Skanning reference values from file
-/// @param TestEquation Pointer to pointer to struct to reallocate the memory
-/// @param ExpectedEquation pointer to pointer to struct to reallocate the memory
-/// @param init_size Size of array
-/// @return ERRROR - Error in scanning from file\
-/// @return GoshaKazunin - Size of array
 int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_size){
     int c = 0;
     FILE *fp = fopen("Reference.txt", "r");
@@ -158,9 +144,6 @@ int OpenTestFile(Equation** TestEquation, Equation** ExpectedEquation, int init_
     }
 }
 
-/// @brief Print of struct, need for debug
-/// @param Equ struct to print
-/// @param str name of struct
 void printEqu(Equation Equ, char str[]){
     printf("%s:\na = %lg b = %lg c = %lg case = %d x1 = %lg x2 = %lg xa = %lg xd = %lg xreal = %lg xi = %lg\n", str,
                         (Equ.coeffs.a), (Equ.coeffs.b), (Equ.coeffs.c), 
@@ -170,9 +153,6 @@ void printEqu(Equation Equ, char str[]){
                         (Equ.roots.x1_real_part), (Equ.roots.x1_imagine_part));
 }
 
-/// @brief Realloc wrapper, replaces garbage values to zero
-/// @param Equ Array of structs, that need to clean
-/// @param size NewSize - OldSize(by realloc) = OldSize, becouse NewSize = 2*OldSize 
 void ReallocNull(Equation* Equ, int size){ 
     memset(Equ + size/sizeof(Equation), 0, size );
 }

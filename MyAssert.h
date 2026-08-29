@@ -1,4 +1,8 @@
-//  Мой собственный assert() для дебага
+/**
+ * @file MyAssert.h
+ * @brief Need for debug
+*/
+
 #include <assert.h>
 #ifndef MYASSERT_H_
 #define MYASSERT_H_

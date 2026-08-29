@@ -2,11 +2,6 @@
 
 #include "Input.h"
 
-#define MAKECHAR(sym) #sym[0]
-
-//  Макрос для общего вызова Input
-#define SAFEINPUT(coefficient) Input(&(coeffs->coefficient), MAKECHAR(coefficient))
-
 /// @brief This function is called in main to start input
 /// @param coeffs Pointer to the coefficients that will be changed
 void MainInput(Coefficients* coeffs){
