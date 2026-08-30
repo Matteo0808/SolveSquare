@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['funcscanf_18',['FuncScanf',['../_input_8cpp.html#a6da28026e047fe1bb851efb945197e44',1,'FuncScanf(double *coeff):&#160;Input.cpp'],['../_input_8h.html#a6da28026e047fe1bb851efb945197e44',1,'FuncScanf(double *coeff):&#160;Input.cpp']]]
+  ['green_5fbg_16',['GREEN_BG',['../_config_8h.html#a0a004077b5a51ea120d37c7137e7132f',1,'Config.h']]]
 ];

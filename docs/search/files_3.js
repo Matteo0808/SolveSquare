@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['main_2ecpp_77',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['myassert_2eh_78',['MyAssert.h',['../_my_assert_8h.html',1,'']]],
-  ['mymath_2ecpp_79',['MyMath.cpp',['../_my_math_8cpp.html',1,'']]],
-  ['mymath_2eh_80',['MyMath.h',['../_my_math_8h.html',1,'']]]
+  ['readme_2emd_78',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['reference_2etxt_79',['Reference.txt',['../_reference_8txt.html',1,'']]]
 ];

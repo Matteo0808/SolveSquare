@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['one_5froot_5fzero_5fa_35',['One_Root_Zero_A',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17acbc00572ce553c022cd71a8e35295931',1,'Config.h']]],
-  ['one_5froot_5fzero_5fd_36',['One_Root_Zero_D',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a5218bd841db7d599f984997573d15bda',1,'Config.h']]],
-  ['opentestfile_37',['OpenTestFile',['../_test_8cpp.html#a2715b53defe841c3f86a52f1a8f866bc',1,'OpenTestFile(Equation **TestEquation, Equation **ExpectedEquation, int init_size):&#160;Test.cpp'],['../_test_8h.html#af378df8f15695afac43b4053e76adf1c',1,'OpenTestFile(Equation **TestEquation, Equation **ExpectedEquation, int size):&#160;Test.cpp']]],
-  ['orange_5fbg_38',['ORANGE_BG',['../_config_8h.html#aea186afabdd394559efa5e93a40d2554',1,'Config.h']]],
-  ['orange_5ftext_39',['ORANGE_TEXT',['../_config_8h.html#a9ff9d46c0e7ff13b7b6d6267404df407',1,'Config.h']]]
+  ['printequ_38',['printEqu',['../_test_8cpp.html#aba68654bd44355fd746b401af94db486',1,'printEqu(Equation Equ, char str[]):&#160;Test.cpp'],['../_test_8h.html#aba68654bd44355fd746b401af94db486',1,'printEqu(Equation Equ, char str[]):&#160;Test.cpp']]],
+  ['printinput_39',['PrintInput',['../_input_8cpp.html#aa302e19517af59094bacb70ff6b5e309',1,'PrintInput():&#160;Input.cpp'],['../_input_8h.html#aa302e19517af59094bacb70ff6b5e309',1,'PrintInput():&#160;Input.cpp']]],
+  ['purple_5fbg_40',['PURPLE_BG',['../_config_8h.html#a40a09acc4f7b4708a152efae770e6019',1,'Config.h']]],
+  ['purple_5ftext_41',['PURPLE_TEXT',['../_config_8h.html#a0b6a073b9c688b1c9841baf0741bec12',1,'Config.h']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['c_4',['c',['../struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed',1,'Coefficients::c()'],['../doxygen__log_8txt.html#a99676bfc3f328ba4f165b6f56fb38095',1,'C():&#160;doxygen_log.txt']]],
+  ['c_4',['c',['../struct_coefficients.html#a3a8a6e5cc52fbaa075ef61983d441eed',1,'Coefficients']]],
   ['case_5',['Case',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17',1,'Config.h']]],
   ['case_5fsolution_6',['case_solution',['../struct_roots.html#ad43c6e099a5cbf6ad224e3896cf33645',1,'Roots']]],
   ['clear_7',['CLEAR',['../_config_8h.html#a611cc9b5f655508482f3d7a9751c182a',1,'Config.h']]],

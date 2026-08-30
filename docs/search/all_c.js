@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['readme_2emd_44',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reallocnull_45',['ReallocNull',['../_test_8cpp.html#a9648b689775a99e22baaada8da04739b',1,'ReallocNull(Equation *Equ, int size):&#160;Test.cpp'],['../_test_8h.html#a9648b689775a99e22baaada8da04739b',1,'ReallocNull(Equation *Equ, int size):&#160;Test.cpp']]],
-  ['red_5fbg_46',['RED_BG',['../_config_8h.html#af9530a4ab1350a85fba3d8935ec6b06c',1,'Config.h']]],
-  ['red_5ftext_47',['RED_TEXT',['../_config_8h.html#ac6b49286f191080eef7f1891a32b6596',1,'Config.h']]],
-  ['reference_2etxt_48',['Reference.txt',['../_reference_8txt.html',1,'']]],
-  ['roots_49',['Roots',['../struct_roots.html',1,'Roots'],['../struct_equation.html#a1a88eeaacd7792bc63a26e970a3fe6cb',1,'Equation::roots()']]],
-  ['runmaintest_50',['RunMainTest',['../_test_8cpp.html#ab5eef13cc7867360546bcb784ffe6acc',1,'RunMainTest():&#160;Test.cpp'],['../_test_8h.html#ab5eef13cc7867360546bcb784ffe6acc',1,'RunMainTest():&#160;Test.cpp']]],
-  ['runtest_51',['RunTest',['../_test_8cpp.html#a216dfc46814f34f0674f8b4cb4b1396d',1,'RunTest(Equation ExpectedEquation, Equation TestEquation):&#160;Test.cpp'],['../_test_8h.html#a216dfc46814f34f0674f8b4cb4b1396d',1,'RunTest(Equation ExpectedEquation, Equation TestEquation):&#160;Test.cpp']]]
+  ['square_20equations_20solver_50',['SQUARE EQUATIONS SOLVER',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['safeinput_51',['SAFEINPUT',['../_input_8h.html#a440e13161a81c9802328631dd77c69eb',1,'Input.h']]],
+  ['solvecomplex_52',['SolveComplex',['../_my_math_8cpp.html#ac654e3c664d2fd1f23df27bb3b7e23c8',1,'SolveComplex(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp'],['../_my_math_8h.html#ac654e3c664d2fd1f23df27bb3b7e23c8',1,'SolveComplex(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp']]],
+  ['solvelinear_53',['SolveLinear',['../_my_math_8cpp.html#a7a74e4ca15b0b16ccf25742c4ddca823',1,'SolveLinear(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp'],['../_my_math_8h.html#a7a74e4ca15b0b16ccf25742c4ddca823',1,'SolveLinear(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp']]],
+  ['solvesquare_54',['SolveSquare',['../_my_math_8cpp.html#a44fd2652c39acb7bf2c670872181c179',1,'SolveSquare(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp'],['../_my_math_8h.html#a44fd2652c39acb7bf2c670872181c179',1,'SolveSquare(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp']]],
+  ['solvezerod_55',['SolveZeroD',['../_my_math_8cpp.html#aa5d003fd32ddf8af63898d385dd8b37a',1,'SolveZeroD(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp'],['../_my_math_8h.html#aa5d003fd32ddf8af63898d385dd8b37a',1,'SolveZeroD(Coefficients coeffs, Roots *roots):&#160;MyMath.cpp']]],
+  ['stopmyassert_56',['STOPMYASSERT',['../_my_assert_8h.html#a910c0bc049785dc0543931042f8ad66d',1,'MyAssert.h']]],
+  ['success_57',['SUCCESS',['../_config_8h.html#aba81e5fa19756eb20605a6cc2aad6e63ac7f69f7c9e5aea9b8f54cf02870e2bf8',1,'Config.h']]]
 ];

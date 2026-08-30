@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['no_5froots_33',['No_Roots',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a23d76307e018e0f7afb899e91b099492',1,'Config.h']]],
-  ['no_5froots_5fin_5freal_5fnumbers_34',['No_Roots_In_Real_Numbers',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a4ef74ecac77d376ce93db56af8c8000b',1,'Config.h']]]
+  ['one_5froot_5fzero_5fa_33',['One_Root_Zero_A',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17acbc00572ce553c022cd71a8e35295931',1,'Config.h']]],
+  ['one_5froot_5fzero_5fd_34',['One_Root_Zero_D',['../_config_8h.html#ab9aab17a5e54a8bae6915bc24db13a17a5218bd841db7d599f984997573d15bda',1,'Config.h']]],
+  ['opentestfile_35',['OpenTestFile',['../_test_8cpp.html#a2715b53defe841c3f86a52f1a8f866bc',1,'OpenTestFile(Equation **TestEquation, Equation **ExpectedEquation, int init_size):&#160;Test.cpp'],['../_test_8h.html#af378df8f15695afac43b4053e76adf1c',1,'OpenTestFile(Equation **TestEquation, Equation **ExpectedEquation, int size):&#160;Test.cpp']]],
+  ['orange_5fbg_36',['ORANGE_BG',['../_config_8h.html#aea186afabdd394559efa5e93a40d2554',1,'Config.h']]],
+  ['orange_5ftext_37',['ORANGE_TEXT',['../_config_8h.html#a9ff9d46c0e7ff13b7b6d6267404df407',1,'Config.h']]]
 ];
