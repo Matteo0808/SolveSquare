@@ -11,9 +11,8 @@
 
 #include <stdio.h>
 #include <math.h>
-//#define NDEBUG
-//#include <assert.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "MyAssert.h"
 
@@ -23,13 +22,23 @@
 #include "Input.h"
 #include "Input.cpp"
 
-#include "Const.h"
+#include "Config.h"
 
 #include "Test.h"
 #include "Test.cpp"
 
-int main(){
+int main(int argc, char* argv[]){
     
+    if (argc == 2){
+        if (strncmp(argv[1], "Test", MAX_LEN_STR) == 0){
+            if (RunMainTest() == ERRROR){
+                printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
+                return ERRROR;
+            }
+            printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
+            return SUCCESS;
+        }
+    }
     struct Equation MainEquation = {}; //   Все параменты квадратки
 
     // Тест

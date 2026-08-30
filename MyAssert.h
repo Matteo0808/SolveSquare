@@ -1,13 +1,15 @@
 /**
+ ************************
  * @file MyAssert.h
- * @brief Need for debug
+ * @brief Needs for debug
+ ************************
 */
 
 #ifndef MYASSERT_H_
 #define MYASSERT_H_
 #include <stdio.h>
 #include <stdlib.h>
-//#define STOPMYASSERT                          // Отключение ассертов
+#define STOPMYASSERT                          // Отключение ассертов
 
 #ifndef STOPMYASSERT
 

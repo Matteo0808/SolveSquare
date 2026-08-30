@@ -1,18 +1,20 @@
 /**
+ ****************************************
  * @file Config.h
  * @brief Structs, consts, enums, defines
+ ****************************************
 */
 
 #ifndef CONFIG_H   
 #define CONFIG_H
-#include <stdio.h>
 
-//#define CONTINUE 2
-// #define ERRROR 1
-// #define SUCCESS 0
+#include <stdio.h>
 
 /// @brief Accuracy in double numbers comparison
 const double EPS = 1e-6;
+
+/// @brief Max strings len for function strncmp()
+const size_t MAX_LEN_STR = 20;
 
 /// @brief Returns of error and success
 enum Error_or_Success {

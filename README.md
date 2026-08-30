@@ -11,6 +11,13 @@ This repository contains the code for a program that solves quadratic equations 
 3. Than follows the math part: program calculates the roots
 4. Than the program print the answer
 
+## How to start the program?
+
+1. Ctrl+` || to open console
+2. g++ main.cpp -o "exe file name" || to compilate program
+3. .\"exe file name" Test || to start test mode
+4. .\"exe file name" || to start main mode
+
 There is nothing to care, i provide for incorrect input from the user. The input repeats, until the input won't be correct.
 
 The program works with real numbers, but **Solver** provides for the case of negative discriminant, and is able to calculate complex roots.

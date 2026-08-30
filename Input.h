@@ -1,15 +1,15 @@
 /**
+ ******************************
  * @file Input.h
  * @brief Input of coefficients
+ ******************************
  */
-
-
 
 #ifndef INPUT_H_
 #define INPUT_H_
 #include <stdio.h>
 #include <stdlib.h>
-#include "Const.h"
+#include "Config.h"
 
 /// @brief define to make char from letter
 #define MAKECHAR(sym) #sym[0]

@@ -2,9 +2,9 @@
 
 #include "Test.h"
 
+
 Error_or_Success RunMainTest(){
     
-    //  TODO: прочитать про realloc(), переписать массивы под calloc(), ввести переменную init_size
     int init_size = 1; ///< Counter of Arrays' elements
 
     Equation* ExpectedEquation = (Equation*) calloc(init_size, sizeof(Equation));
