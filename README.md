@@ -15,9 +15,9 @@ This repository contains the code for a program that solves quadratic equations 
 
 1. Ctrl+` || to open console
 2. *g++ main.cpp -o "exe file name"* || to compilate program
-3. *.\\"exe file name" -t or --test* || to start test mode
-4. *.\\"exe file name" -i or --interactive* || to start interactive mode
-5. *.\\"exe file name" -c "a-coefficient value" "b-coefficient value" "c-coefficient value"* || to start console input mode
+3. *.\\"exe file name" **-t/--test*** || to start test mode
+4. *.\\"exe file name" **-i/--interactive*** || to start interactive mode
+5. *.\\"exe file name" **-c/--coefficient*** "a-coefficient value" "b-coefficient value" "c-coefficient value"* || to start console input mode
 
 There is nothing to care, i provide for incorrect input from the user. The input repeats, until the input won't be correct.
 
