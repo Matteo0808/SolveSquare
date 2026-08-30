@@ -15,8 +15,8 @@ This repository contains the code for a program that solves quadratic equations 
 
 1. Ctrl+` || to open console
 2. g++ main.cpp -o "exe file name" || to compilate program
-3. .\"exe file name" Test || to start test mode
-4. .\"exe file name" || to start main mode
+3. .\\"exe file name" Test || to start test mode
+4. .\\"exe file name" || to start main mode
 
 There is nothing to care, i provide for incorrect input from the user. The input repeats, until the input won't be correct.
 
