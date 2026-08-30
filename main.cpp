@@ -32,7 +32,7 @@
 int main(int argc, char* argv[]){
     
     if (strcmp(argv[1], "-t") == 0 || strcmp(argv[1], "--test") == 0){
-        if (RunMainTest() == ERRROR){
+        if (RunMainTest(argv[2]) == ERRROR){
             printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
             return ERRROR;
         }

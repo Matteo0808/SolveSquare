@@ -3,7 +3,7 @@
 #include "Test.h"
 
 
-Error_or_Success RunMainTest(){
+Error_or_Success RunMainTest(char f_ile[]){
     
     int init_size = 1; ///< Counter of Arrays' elements
 
@@ -21,7 +21,7 @@ Error_or_Success RunMainTest(){
 
     // printEqu(ExpectedEquation, "ExpectedEquation");
     // printEqu(TestEquation, "TestEquation");
-    init_size = OpenTestFile(&TestEquation, &ExpectedEquation, init_size);
+    init_size = OpenTestFile(&TestEquation, &ExpectedEquation, init_size, f_ile);
     //printf("%d\n", init_size);
     for(int i = 0; i < init_size; i++){
         // printEqu(TestEquation[i], "TestEquation");
