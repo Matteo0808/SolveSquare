@@ -27,14 +27,16 @@
 #include "Test.h"
 #include "Test.cpp"
 
+// -t 
+
 int main(int argc, char* argv[]){
     
-    if (argc == 2){
-        if (strncmp(argv[1], "Test", MAX_LEN_STR) == 0){
-            if (RunMainTest() == ERRROR){
-                printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
-                return ERRROR;
-            }
+    if (strcmp(argv[1], "-t") == 0 || strcmp(argv[1], "--test") == 0){
+        if (RunMainTest() == ERRROR){
+            printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
+            return ERRROR;
+        }
+        else{
             printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
             return SUCCESS;
         }
@@ -42,8 +44,7 @@ int main(int argc, char* argv[]){
     struct Equation MainEquation = {}; //   Все параменты квадратки
 
     // Тест
-    if(RunMainTest() != SUCCESS)
-    {
+    if(RunMainTest() != SUCCESS){
         printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
         return ERRROR; //   Завершение программы
     }
@@ -51,8 +52,15 @@ int main(int argc, char* argv[]){
         printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
     }
 
+    if (strcmp(argv[1], "-c") == 0 || strcmp(argv[1], "--coefficients") == 0){
+        MainEquation.coeffs.a = (double)(*argv[2]) - '0';
+        MainEquation.coeffs.b = (double)(*argv[3]) - '0';
+        MainEquation.coeffs.c = (double)(*argv[4]) - '0';
+    }
     //  Ввод
-    MainInput(&(MainEquation.coeffs));
+    if (strcmp(argv[1], "-i") == 0  || strcmp(argv[1], "--interactive") == 0){
+        MainInput(&(MainEquation.coeffs));
+    }
 
     //  Решение
     MainEquation.roots.case_solution = SolveSquare(MainEquation.coeffs, &(MainEquation.roots));
