@@ -32,7 +32,7 @@
 int main(int argc, char* argv[]){
     
     if (strcmp(argv[1], "-t") == 0 || strcmp(argv[1], "--test") == 0){
-        if (RunMainTest(argv[2]) == ERRROR){
+        if (RunMainTest() == ERRROR){
             printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
             return ERRROR;
         }
@@ -43,22 +43,13 @@ int main(int argc, char* argv[]){
     }
     struct Equation MainEquation = {}; //   Все параменты квадратки
 
-    // Тест
-    if(RunMainTest() != SUCCESS){
-        printf(WHITE_TEXT RED_BG "__TESTS__FAILED__" CLEAR "_\n");
-        return ERRROR; //   Завершение программы
-    }
-    else{
-        printf(WHITE_TEXT GREEN_BG "__TESTS__COMPLETED__SUCCESSFULLY__" CLEAR "_\n");
-    }
-
-    if (strcmp(argv[1], "-c") == 0 || strcmp(argv[1], "--coefficients") == 0){
+    if (strcmp(argv[1], "-c") == 0 || strcmp(argv[1], "--coefficients") == 0){ // Console input mode
         MainEquation.coeffs.a = (double)(*argv[2]) - '0';
         MainEquation.coeffs.b = (double)(*argv[3]) - '0';
         MainEquation.coeffs.c = (double)(*argv[4]) - '0';
     }
     //  Ввод
-    if (strcmp(argv[1], "-i") == 0  || strcmp(argv[1], "--interactive") == 0){
+    if (strcmp(argv[1], "-i") == 0  || strcmp(argv[1], "--interactive") == 0){ // Hand input mode
         MainInput(&(MainEquation.coeffs));
     }
 

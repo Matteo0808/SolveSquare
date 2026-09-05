@@ -34,6 +34,15 @@ void PrintInput(){
     printf(PURPLE_TEXT ORANGE_BG "# Enter a, b, c:\n" CLEAR);
 }
 
+void printf_slow(const char str[]){
+    int i = 0;
+    while(1){
+        printf(str[i]);
+        Sleep(200);
+    }
+
+}
+
 /// @brief Entering coefficient with checking for erroneous input
 /// @param coeff Each coefficient
 /// @return ERRROR - program exits with an error\

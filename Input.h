@@ -9,6 +9,7 @@
 #define INPUT_H_
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 #include "Config.h"
 
 /// @brief define to make char from letter

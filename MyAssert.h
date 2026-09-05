@@ -17,7 +17,7 @@
 #define MyAssert(Bool) if(Bool == 0)\
 {\
     do{\
-    printf("Error in file %s in line %d", __FILE__, __LINE__);\
+    fprintf(stderr, "Error in file %s in line %d", __FILE__, __LINE__);\
     abort();\
     }while(0);\
 }
