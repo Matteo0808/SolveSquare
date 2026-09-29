@@ -29,9 +29,9 @@ Comparison of double numbers is performed with accuracy **EPS = 1 * 10^-6**.
 <details>
 <summary>Includes:</summary>
 
-<stdio.h>
-<stdlib.h>
-<math.h>
+<stdio.h>\
+<stdlib.h>\
+<math.h>\
 <string.h>
 
 </details>
